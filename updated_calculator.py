@@ -1,28 +1,24 @@
 def add(num1, num2):
-    add = num1 + num2
-    return add
+    return num1 + num2
 
 def subtract(num1, num2):
-    sub = num1 - num2
-    return sub
+    return num1 - num2
 
 def multiply(num1, num2):
-    mul = num1 * num2
-    return mul
+    return  num1 * num2
 
 def divide(num1, num2):
-    divide = num1 / num2
-    return divide
+    return  num1 / num2
 
 def remainder_finder(num1, num2):
-    remainder_finder = num1 % num2
-    return remainder_finder
+    return num1 % num2
 
 def int_divison(num1, num2):
-    int_divison = num1 // num2
-    return int_divison
+    return  num1 // num2
 
-print("""___Its Prithvi's Calculator for only 2 no.'s calculation___
+
+while True:
+    print("""___Its Prithvi's Calculator for only 2 no.'s calculation___
 ___________________________________________________________________________
 
       what you want to do
@@ -34,46 +30,54 @@ ___________________________________________________________________________
       3 for multiplication
       4 for division
       5 for finding remainder
-      6 for integer divison """)
+      6 for integer divison 
+      7 for exit    """)
 
-a = int(input("What you want to do , enter your number:"))
+    a = int( input("What you want to do , enter your number:"))
 
-if a < 1 or a > 6:
-    print("Invalid Input\nPlease select the number from 1 to 6 only")
-    exit()
+    if a == 7:
+        print("Bye , have a Good Day")
+        break
 
+    if a < 1 or a > 7:
+        print("Invalid Input\nPlease select the number from 1 to 7 only")
+        exit()
+       
 
-num1 = float(input("Enter first_no for operation:"))
-num2 = float(input("Enter second_no for operation:"))
+   
 
-if a in (4, 5, 6) and num2 == 0:
-    print("Error! , you cant divide by zero")
-    exit()
+    num1 = float(input("Enter first_no for operation:"))
+    num2 = float(input("Enter second_no for operation:"))
 
+    if a in (4,5,6) and num2 == 0:
+        print("Error! , you cant divide by zero")
+        exit()
 
-if a == 1:
-    x = add(num1, num2)
-    print(x)
+    if a == 1:
+        x = add(num1, num2)
+        print(x)
     
-elif a == 2:
-    x = subtract(num1, num2)
-    print(x)
+    elif a == 2:
+        x = subtract(num1, num2)
+        print(x)
 
-elif a == 3:
-    x = multiply(num1, num2)
-    print(x) 
+    elif a == 3:
+        x = multiply(num1, num2)
+        print(x) 
 
-elif a == 4:    
-    x = divide(num1, num2)
-    print(x)
+    elif a == 4:    
+        x = divide(num1, num2)
+        print(x)
     
-elif a == 5:
-    x = remainder_finder(num1, num2)
-    print(x)
+    elif a == 5:
+        x = remainder_finder(num1, num2)
+        print(x)
 
-elif a == 6:    
-    x = int_divison(num1, num2)
-    print(x)
+    elif a == 6:    
+        x = int_divison(num1, num2)
+        print(x)
+
+
 
 
 
